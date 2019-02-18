@@ -8,10 +8,10 @@ Core iOS Application Architecture - The development paradigm of clean, testable 
 
 * [Requirements]
 * [Usage]
-  + [Project]
-  + [Module]
-  + [Service]
-  + [Coordinator]
+  + [Project Template]
+  + [Module Template]
+  + [Service Template]
+  + [Coordinator Template]
 * [Code Style]
 * [Installation]
 
@@ -23,9 +23,11 @@ Core iOS Application Architecture - The development paradigm of clean, testable 
 
 ### Example project
 
+Download a sample project built on the basis of this paradigm.
+
+
 ## Usage
 
-
 <img src="/TemplateIcon@2x.png" align="left" height="80px" hspace="0px" vspace="10px">
 <img src="/TemplateIcon@2x.png" align="left" height="80px" hspace="0px" vspace="10px">
 <img src="/TemplateIcon@2x.png" align="left" height="80px" hspace="0px" vspace="10px">
@@ -34,9 +36,4 @@ Core iOS Application Architecture - The development paradigm of clean, testable 
 <br>
 <br>
 
-
-
-
- 
-
-### Project Templates
+### Project Template
