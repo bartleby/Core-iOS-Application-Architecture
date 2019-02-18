@@ -112,7 +112,37 @@ For example, you plan a small project, then your choice is a project based on th
 <br>
 <br>
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Вы можете использовать разные модули в одном проекте исходя из сложности вашего экрана.
+Один экран - один модуль.
+Например вам нужно создать простой экран на котором будет WebView с какой то информацией, Ваш выбор MVC модуль,
+если экран предпологает сложную бизнес логику, взаимодействие с сервером и т.д - ваш выбор модуль VIPER.
+
+### VIPER Module structure
+
+* Module
+  - Storyboards
+  - Assembly
+  - Presenter
+  - Interactor
+  - View
+  - Protocols
+
+### MVP Module structure
+
+* Module
+  - Storyboards
+  - Assembly
+  - Presenter
+  - View
+  - Protocols
+
+### MVC Module structure
+
+* Module
+  - Storyboards
+  - Assembly
+  - View
+  - Protocols
 
 ### Service Template
 
