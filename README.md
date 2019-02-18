@@ -112,10 +112,10 @@ For example, you plan a small project, then your choice is a project based on th
 <br>
 <br>
 
-Вы можете использовать разные модули в одном проекте исходя из сложности вашего экрана.
-Один экран - один модуль.
-Например вам нужно создать простой экран на котором будет WebView с какой то информацией, Ваш выбор MVC модуль,
-если экран предпологает сложную бизнес логику, взаимодействие с сервером и т.д - ваш выбор модуль VIPER.
+You can use different modules in one project based on the complexity of your screen.
+One screen - one module.
+For example, you need to create a simple screen on which there will be a WebView with some information - your choice of MVC module,
+If the screen assumes complex business logic, interaction with the server, etc., your choice is the VIPER module.
 
 #### VIPER Module structure
 
