@@ -36,16 +36,22 @@ Download a sample project built on the basis of this paradigm.
 
 ![Core-Architecture](/images/core.png)
 
-<img src="/images/project-viper.png" align="left" height="80px" hspace="0px" vspace="10px">
-<img src="/images/project-mvp.png" align="left" height="80px" hspace="0px" vspace="10px">
-<img src="/images/project-mvc.png" align="left" height="80px" hspace="0px" vspace="10px">
-
 <br>
 <br>
 <br>
 
 ### Project Template
 
+<img src="/images/project-viper.png" align="left" height="80px" hspace="0px" vspace="10px">
+<img src="/images/project-mvp.png" align="left" height="80px" hspace="0px" vspace="10px">
+<img src="/images/project-mvc.png" align="left" height="80px" hspace="0px" vspace="10px">
+
+
+<br>
+<br>
+<br>
+
+### Module Template
 
 <img src="/images/module-viper.png" align="left" height="80px" hspace="0px" vspace="10px">
 <img src="/images/module-mvp.png" align="left" height="80px" hspace="0px" vspace="10px">
@@ -55,8 +61,7 @@ Download a sample project built on the basis of this paradigm.
 <br>
 <br>
 
-### Module Template
-
+### Service Template
 
 <img src="/images/service.png" align="left" height="80px" hspace="0px" vspace="10px">
 
@@ -64,17 +69,13 @@ Download a sample project built on the basis of this paradigm.
 <br>
 <br>
 
-### Service Template
-
+### Coordinator Template
 
 <img src="/images/coordinator.png" align="left" height="80px" hspace="0px" vspace="10px">
 
 <br>
 <br>
 <br>
-
-### Coordinator Template
-
 
 ## Code Style
 
