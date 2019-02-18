@@ -176,10 +176,38 @@ You can learn more about the coordinators from the [article](https://medium.com/
 
 ### Naming
 
+Good clean code also depends on the correct naming.
+
 #### View
-#### Presenter
-#### Interactor
-#### Module
+
+##### IBOutlet
+
+###### Wrong!
+```Swift
+@IBOutlet weak var descriptionText: UITextView!
+
+@IBOutlet weak var image: UIImageView!
+@IBOutlet weak var avatarIcon: UIImageView!
+
+@IBOutlet weak var labelTitle: UILabel!
+
+@IBOutlet weak var contentView: UIScrollView!
+
+```
+
+###### Right!
+```Swift
+
+@IBOutlet weak var descriptionTextView: UITextView!
+
+@IBOutlet weak var avatarImageView: UIImageView!
+
+@IBOutlet weak var titleLabel: UILabel!
+
+@IBOutlet weak var contentScrollView: UIScrollView!
+
+```
+
 
 
 ## Installation
