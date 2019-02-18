@@ -10,6 +10,7 @@ Core iOS Application Architecture - The development paradigm of clean, testable 
 
 * [Requirements](#requirements)
 * [Usage](#usage)
+  + [Project structure](#project-structure)
   + [Project Template](#project-template)
   + [Module Template](#module-template)
   + [Service Template](#service-template)
@@ -48,7 +49,56 @@ Download a sample project built on the basis of this paradigm.
 <br>
 <br>
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+There are 3 project templates, MVC, MVP and VIPER, the templates differ only in the main module architecture.
+This does not affect the continued use of modules, you can create any modules based on the complexity of your screen.
+For example, you plan a small project, then your choice is a project based on the MVP pattern.
+
+#### Each project template includes:
+- DeepLink out of the box
+- Launch Instructor
+- Plugable AppDelegate
+- [Swilby](https://github.com/bartleby/Swilby) Library for DI
+- Toolkit, Tweaks
+- Extensions
+- Router
+- etc.
+
+### Project structure
+
+* AppDelegate
+  - Plugins
+* Assemblys
+  - Coordinators
+  - Modules
+  - Services
+* Config
+  - Constants and ConfigDefaults
+* Library
+  - Swilby
+* Utils
+  - Tweaks
+  - PlugableAppDelegate
+* Extensions
+  - Collection
+  - Numbers
+  - Codable
+  - Color
+  - Date
+  - URL
+  - FileManager
+  - View
+  - String
+  - NSObject
+* Common
+  - Misc
+  - Coordinator
+  - Module
+  - ActionCloud
+  - View
+  - Protocols
+  - DeepLink
+  - Router
+
 
 
 ### Module Template
