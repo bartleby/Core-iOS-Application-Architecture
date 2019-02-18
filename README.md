@@ -34,6 +34,8 @@ Download a sample project built on the basis of this paradigm.
 
 ## Usage
 
+![Core-Architecture](/images/core.png)
+
 <img src="/images/project-viper.png" align="left" height="80px" hspace="0px" vspace="10px">
 <img src="/images/project-mvp.png" align="left" height="80px" hspace="0px" vspace="10px">
 <img src="/images/project-mvc.png" align="left" height="80px" hspace="0px" vspace="10px">
