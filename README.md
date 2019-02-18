@@ -117,7 +117,7 @@ For example, you plan a small project, then your choice is a project based on th
 Например вам нужно создать простой экран на котором будет WebView с какой то информацией, Ваш выбор MVC модуль,
 если экран предпологает сложную бизнес логику, взаимодействие с сервером и т.д - ваш выбор модуль VIPER.
 
-### VIPER Module structure
+#### VIPER Module structure
 
 * Module
   - Storyboards
@@ -127,7 +127,7 @@ For example, you plan a small project, then your choice is a project based on th
   - View
   - Protocols
 
-### MVP Module structure
+#### MVP Module structure
 
 * Module
   - Storyboards
@@ -136,7 +136,7 @@ For example, you plan a small project, then your choice is a project based on th
   - View
   - Protocols
 
-### MVC Module structure
+#### MVC Module structure
 
 * Module
   - Storyboards
