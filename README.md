@@ -13,15 +13,12 @@ Core iOS Application Architecture - The development paradigm of clean, testable 
   + [Project structure](#project-structure)
   + [Project Template](#project-template)
   + [Module Template](#module-template)
-  + [Service Template](#service-template)
+  + [Service Template](#service-template-soa)
   + [Coordinator Template](#coordinator-template)
 * [Code Style](#code-style)
   + [Naming](#naming)
-    - [View](#view)
-    - [Presenter](#presenter)
-    - [Interactor](#interactor)
-    - [Module](#module)
 * [Installation](#installation)
+* [Author](#author)
 * [License](#license)
 
 
@@ -37,6 +34,51 @@ Download a sample project built on the basis of this paradigm.
 
 ## Usage
 
+### Create new Project
+
+* Open Xcode
+* File > New > Project or press shortcuts ⇧⌘N
+* Choice MVC, MVP or VIPER Architecture
+* After you have created a project, you need to remove reference on the folder "Classes"
+  - Highlight the Classes folder in the Xcode Project Navigator
+  - Press Backspace Key
+  - Press "Remove Reference" in alert window
+* Now you need to return the "Classes" folder to the project.
+  - Drag the "Classes" folder from the Finder to the Xcode project
+* Profit! 🎉
+
+### Create new Module, Service or Coordinator
+
+* Open Xcode Project
+* Select Modules, Services or Coordinators Group in Xcode Project Navigator
+* Create new file
+  - File > New > File... or press shortcuts ⌘N
+  - Choice Module (MVC, MVP or VIPER) Service or Coordinator
+  - Enter Name (if you wont to create "Service" you must specify at the end of the name "Service" for example - NetworkService or SettingsService)
+* After you have created a Service, Module or Coordinator, you need to remove reference on the folder
+  - Highlight the Folder in the Xcode Project Navigator
+  - Press Backspace Key
+  - Press "Remove Reference" in alert window
+* Now you need to return your Folder to the project.
+  - Drag the Folder from the Finder to the Xcode project
+* Profit! 🎉
+
+Important! you need to add your Service Module or Coordinator to the DI Container in AppDelegate.swift
+
+```Swift
+// Setup Coordinators
+container.apply(AppCoordinatorAssembly.self)
+container.apply(MainCoordinatorAssembly.self)
+// add your coordinator here
+
+// Setup Modules
+container.apply(MainAssembly.self)
+// add your module here
+
+// Setup Services
+container.apply(AppConfigServiceAssembly.self)
+// add your service here
+```
 
 ### Project Template
 
@@ -291,8 +333,46 @@ func setPage(index: Int)
 
 ```
 
+#### Interactor Input
+
+###### Wrong!
+```Swift
+
+func getUser(_ completion: (User) -> Void)
+func obtainUser(_ completion: () -> ())
+func config() -> Config
+
+```
+
+I recommend using Promise - Interactor > Presenter
+###### Right!
+```Swift
+
+func obtainUser() -> Promise
+func obtainConfig() -> Promise
+
+```
+or
+```Swift
+
+func obtainUser(_ completion: (User) -> Void)
+func obtainConfig(_ completion: (Config) -> Void)
+
+```
+
 
 ## Installation
+
+Only need execute this command in terminal:
+
+```swift
+sudo swift install.swift
+```
+
+## Author
+
+🦆 Alex Artemev [www.iDevs.io](https://iDevs.io)
+
 
 ## License
 
