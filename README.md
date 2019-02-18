@@ -13,7 +13,13 @@ Core iOS Application Architecture - The development paradigm of clean, testable 
   + [Service Template](#service-template)
   + [Coordinator Template](#coordinator-template)
 * [Code Style](#code-style)
+  + [Naming](#naming)
+    - [View](#view)
+    - [Presenter](#presenter)
+    - [Interactor](#interactor)
+    - [Module](#module)
 * [Installation](#installation)
+* [License](#license)
 
 
 ## Requirements
@@ -23,7 +29,6 @@ Core iOS Application Architecture - The development paradigm of clean, testable 
 
 ### Example project
 
-## Awesome swift
 Download a sample project built on the basis of this paradigm.
 
 
@@ -39,6 +44,47 @@ Download a sample project built on the basis of this paradigm.
 
 ### Project Template
 
+
+<img src="/images/module-viper.png" align="left" height="80px" hspace="0px" vspace="10px">
+<img src="/images/module-mvp.png" align="left" height="80px" hspace="0px" vspace="10px">
+<img src="/images/module-mvc.png" align="left" height="80px" hspace="0px" vspace="10px">
+
+<br>
+<br>
+<br>
+
+### Module Template
+
+
+<img src="/images/service.png" align="left" height="80px" hspace="0px" vspace="10px">
+
+<br>
+<br>
+<br>
+
+### Service Template
+
+
+<img src="/images/coordinator.png" align="left" height="80px" hspace="0px" vspace="10px">
+
+<br>
+<br>
+<br>
+
+### Coordinator Template
+
+
+## Code Style
+
+### Naming
+
+#### View
+#### Presenter
+#### Interactor
+#### Module
+
+
+## Installation
 
 ## License
 
