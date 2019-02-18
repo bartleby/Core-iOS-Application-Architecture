@@ -39,7 +39,7 @@ Download a sample project built on the basis of this paradigm.
 ### Project Template
 
 
-### License
+## License
 
 MIT License
 
