@@ -6,9 +6,9 @@ Core iOS Application Architecture - The development paradigm of clean, testable 
 
 ## Contents
 
-* [Requirements] (requirements)
-* [Usage]
-  + [Project Template]
+* [Requirements](#requirements)
+* [Usage](#usage)
+  + [Project Template](#project-template)
   + [Module Template]
   + [Service Template]
   + [Coordinator Template]
@@ -23,6 +23,7 @@ Core iOS Application Architecture - The development paradigm of clean, testable 
 
 ### Example project
 
+## Awesome swift
 Download a sample project built on the basis of this paradigm.
 
 
