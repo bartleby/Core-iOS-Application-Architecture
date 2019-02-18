@@ -144,7 +144,7 @@ If the screen assumes complex business logic, interaction with the server, etc.,
   - View
   - Protocols
 
-### Service Template
+### Service Template (SoA)
 
 <img src="/images/service.png" align="left" height="80px" hspace="0px" vspace="10px">
 
@@ -153,7 +153,9 @@ If the screen assumes complex business logic, interaction with the server, etc.,
 <br>
 <br>
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Each service is engaged in its own business: the authorization service works with authorization, the user service with user data and so on. A good rule (a specific service works with one type of entity) is separation from the server side into different path: /auth, /user, /settings, but this is not necessary.
+
+You can learn more about the principle of developing SoA from [wikipedia](https://en.wikipedia.org/wiki/Service-oriented_architecture)
 
 
 ### Coordinator Template
@@ -165,7 +167,9 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 <br>
 <br>
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Coordinator is an object that handles navigation flow and shares flow’s handling for the next coordinator after switching on the next chain. It means that coordinators should only keep navigation logic between screens. Coordinators can keep references to a storage, which holds data that is used by factories for creating modules, but they can never handle a module’s business logic and never drive a cell’s behavior.
+
+You can learn more about the coordinators from the [article](https://medium.com/blacklane-engineering/coordinators-essential-tutorial-part-i-376c836e9ba7) by Andrey Panov.
 
 
 ## Code Style
