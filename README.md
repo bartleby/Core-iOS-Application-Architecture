@@ -11,7 +11,7 @@ Core iOS Application Architecture - The development paradigm of clean, testable 
   + [Project Template](#project-template)
   + [Module Template](#module-template)
   + [Service Template](#service-template)
-  + [Coordinator Template](#coordinator-emplate)
+  + [Coordinator Template](#coordinator-template)
 * [Code Style](#code-style)
 * [Installation](#installation)
 
