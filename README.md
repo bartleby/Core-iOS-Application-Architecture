@@ -178,19 +178,12 @@ You can learn more about the coordinators from the [article](https://medium.com/
 
 Good clean code also depends on the correct naming.
 
-#### View
-
-##### IBOutlet
-
 ###### Wrong!
 ```Swift
 @IBOutlet weak var descriptionText: UITextView!
-
 @IBOutlet weak var image: UIImageView!
 @IBOutlet weak var avatarIcon: UIImageView!
-
 @IBOutlet weak var labelTitle: UILabel!
-
 @IBOutlet weak var contentView: UIScrollView!
 
 ```
@@ -199,15 +192,104 @@ Good clean code also depends on the correct naming.
 ```Swift
 
 @IBOutlet weak var descriptionTextView: UITextView!
-
 @IBOutlet weak var avatarImageView: UIImageView!
-
 @IBOutlet weak var titleLabel: UILabel!
-
 @IBOutlet weak var contentScrollView: UIScrollView!
 
 ```
 
+###### Wrong!
+```Swift
+
+let vc = NewsViewController()
+let msg = Message()
+let shape1 = Shape()
+
+```
+
+###### Right!
+```Swift
+
+let newsViewController = NewsViewController()
+let message = Message()
+let square = Shape()
+
+```
+
+###### Wrong!
+```Swift
+
+view.hidden
+element.expanded
+array.empty
+
+```
+
+###### Right!
+```Swift
+
+view.isHidden
+element.isExpanded
+array.isEmpty
+
+```
+
+#### View Output
+
+###### Wrong!
+```Swift
+func viewLoaded()
+func authButtonTap()
+func textChanged(text: String)
+
+```
+
+###### Right!
+```Swift
+
+func viewDidLoad()
+func authButtonDidTap()
+func usernameTextFieldDidChange(value: String)
+
+```
+
+#### Module Output
+
+###### Wrong!
+```Swift
+
+var authCancel: (() -> Void)? { get set }
+var authComplete: ((String) -> Void)? { get set }
+var userData: ((UserData) -> Void)? { get set }
+
+```
+
+###### Right!
+```Swift
+
+var onAuthCancel: (() -> Void)? { get set }
+var onAuthComplete: ((String) -> Void)? { get set }
+var onUserDataComplete: ((UserData) -> Void)? { get set }
+
+```
+
+#### Module Input
+
+###### Wrong!
+```Swift
+
+func token(_ token: String)
+func pageIndex(_ i: Int)
+
+```
+
+###### Right!
+```Swift
+
+func setToken()
+func setPage(index: Int)
+
+```
 
 
 ## Installation
