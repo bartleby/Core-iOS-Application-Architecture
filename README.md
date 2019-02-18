@@ -4,6 +4,8 @@
 
 Core iOS Application Architecture - The development paradigm of clean, testable code, modular iOS applications.
 
+![Core-Architecture](/images/core.png)
+
 ## Contents
 
 * [Requirements](#requirements)
@@ -34,22 +36,20 @@ Download a sample project built on the basis of this paradigm.
 
 ## Usage
 
-![Core-Architecture](/images/core.png)
-
-<br>
-<br>
-<br>
 
 ### Project Template
 
-<img src="/images/project-viper.png" align="left" height="80px" hspace="0px" vspace="10px">
-<img src="/images/project-mvp.png" align="left" height="80px" hspace="0px" vspace="10px">
-<img src="/images/project-mvc.png" align="left" height="80px" hspace="0px" vspace="10px">
+<img src="/images/project-viper.png" align="left" height="80px">
+<img src="/images/project-mvp.png" align="left" height="80px">
+<img src="/images/project-mvc.png" align="left" height="80px">
 
+<br>
+<br>
+<br>
+<br>
 
-<br>
-<br>
-<br>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
 
 ### Module Template
 
@@ -60,6 +60,9 @@ Download a sample project built on the basis of this paradigm.
 <br>
 <br>
 <br>
+<br>
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
 ### Service Template
 
@@ -68,6 +71,10 @@ Download a sample project built on the basis of this paradigm.
 <br>
 <br>
 <br>
+<br>
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
 
 ### Coordinator Template
 
@@ -76,6 +83,10 @@ Download a sample project built on the basis of this paradigm.
 <br>
 <br>
 <br>
+<br>
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
 
 ## Code Style
 
