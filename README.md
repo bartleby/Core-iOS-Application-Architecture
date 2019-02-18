@@ -63,7 +63,7 @@ Download a sample project built on the basis of this paradigm.
   - Drag the Folder from the Finder to the Xcode project
 * Profit! 🎉
 
-Important! you need to add your Service Module or Coordinator to the DI Container in AppDelegate.swift
+Important! you need to add your Service, Module or Coordinator to the DI Container in AppDelegate.swift
 
 ```Swift
 // Setup Coordinators
@@ -328,7 +328,7 @@ func pageIndex(_ i: Int)
 ###### Right!
 ```Swift
 
-func setToken()
+func set(token: String)
 func setPage(index: Int)
 
 ```
@@ -339,7 +339,7 @@ func setPage(index: Int)
 ```Swift
 
 func getUser(_ completion: (User) -> Void)
-func obtainUser(_ completion: () -> ())
+func obtainUser(_ completion: (User) -> ())
 func config() -> Config
 
 ```
