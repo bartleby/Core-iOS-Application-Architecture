@@ -2,13 +2,14 @@
 
 ## Overview
 
-Core iOS Application Architecture - The development paradigm of clean, testable code, modular iOS applications.
+Core iOS Application Architecture - The development paradigm of clean, testable code and modular iOS applications.
 
 ![Core-Architecture](/images/core.png)
 
 ## Contents
 
 * [Requirements](#requirements)
+  + [Example project](#example-project)
 * [Usage](#usage)
   + [Project structure](#project-structure)
   + [Project Template](#project-template)
@@ -29,12 +30,12 @@ Core iOS Application Architecture - The development paradigm of clean, testable 
 
 ### Example project
 
-Download a sample project built on the basis of this paradigm.
+[Download](http://google.com) example project built on the basis of this paradigm.
 
 
 ## Usage
 
-### Create new Project
+#### Create new Project
 
 * Open Xcode
 * File > New > Project or press shortcuts ⇧⌘N
@@ -47,7 +48,7 @@ Download a sample project built on the basis of this paradigm.
   - Drag the "Classes" folder from the Finder to the Xcode project
 * Profit! 🎉
 
-### Create new Module, Service or Coordinator
+#### Create new Module, Service or Coordinator
 
 * Open Xcode Project
 * Select Modules, Services or Coordinators Group in Xcode Project Navigator
@@ -77,6 +78,7 @@ container.apply(MainAssembly.self)
 
 // Setup Services
 container.apply(AppConfigServiceAssembly.self)
+container.apply(EnvironmentServiceAssembly.self)
 // add your service here
 ```
 
@@ -113,8 +115,7 @@ For example, you plan a small project, then your choice is a project based on th
   - Coordinators
   - Modules
   - Services
-* Config
-  - Constants and ConfigDefaults
+* Constants
 * Library
   - Swilby
 * Utils
@@ -309,9 +310,9 @@ var userData: ((UserData) -> Void)? { get set }
 ###### Right!
 ```Swift
 
-var onAuthCancel: (() -> Void)? { get set }
-var onAuthComplete: ((String) -> Void)? { get set }
-var onUserDataComplete: ((UserData) -> Void)? { get set }
+var onAuthCanceled: (() -> Void)? { get set }
+var onAuthCompleted: ((String) -> Void)? { get set }
+var onUserDataCompleted: ((UserData) -> Void)? { get set }
 
 ```
 
@@ -344,15 +345,8 @@ func config() -> Config
 
 ```
 
-I recommend using Promise - Interactor > Presenter
 ###### Right!
-```Swift
 
-func obtainUser() -> Promise
-func obtainConfig() -> Promise
-
-```
-or
 ```Swift
 
 func obtainUser(_ completion: (User) -> Void)
