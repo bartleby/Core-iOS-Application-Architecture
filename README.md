@@ -30,7 +30,7 @@ Core iOS Application Architecture - The development paradigm of clean, testable 
 
 ### Example project
 
-[Download](http://google.com) example project built on the basis of this paradigm.
+[Download](https://github.com/bartleby/CAA-Exemple-Project) example project built on the basis of this paradigm.
 
 
 ## Usage
