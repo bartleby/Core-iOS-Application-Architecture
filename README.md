@@ -110,7 +110,7 @@ For example, you plan a small project, then your choice is a project based on th
 ### Project structure
 
 * AppDelegate
-  - Plugins
+  - Services
 * Assemblys
   - Coordinators
   - Modules
@@ -120,7 +120,6 @@ For example, you plan a small project, then your choice is a project based on th
   - Swilby
 * Utils
   - Tweaks
-  - PlugableAppDelegate
 * Extensions
   - Collection
   - Numbers
@@ -133,6 +132,7 @@ For example, you plan a small project, then your choice is a project based on th
   - String
   - NSObject
 * Common
+  - AppDelegateManager
   - Misc
   - Coordinator
   - Module
@@ -159,6 +159,8 @@ You can use different modules in one project based on the complexity of your scr
 One screen - one module.
 For example, you need to create a simple screen on which there will be a WebView with some information - your choice of MVC module,
 If the screen assumes complex business logic, interaction with the server, etc., your choice is the VIPER module.
+
+All your modules should be in the "Modules" folder along the path "Classes/Assemblys/Modules"
 
 #### VIPER Module structure
 
@@ -198,6 +200,8 @@ If the screen assumes complex business logic, interaction with the server, etc.,
 
 Each service is engaged in its own business: the authorization service works with authorization, the user service with user data and so on. A good rule (a specific service works with one type of entity) is separation from the server side into different path: /auth, /user, /settings, but this is not necessary.
 
+All your services should be in the "Services" folder along the path "Classes/Assemblys/Services"
+
 You can learn more about the principle of developing SoA from [wikipedia](https://en.wikipedia.org/wiki/Service-oriented_architecture)
 
 
@@ -211,6 +215,8 @@ You can learn more about the principle of developing SoA from [wikipedia](https:
 <br>
 
 Coordinator is an object that handles navigation flow and shares flow’s handling for the next coordinator after switching on the next chain. It means that coordinators should only keep navigation logic between screens. Coordinators can keep references to a storage, which holds data that is used by factories for creating modules, but they can never handle a module’s business logic and never drive a cell’s behavior.
+
+All your coordinators should be in the "Coordinators" folder along the path "Classes/Assemblys/Coordinators"
 
 You can learn more about the coordinators from the [article](https://medium.com/blacklane-engineering/coordinators-essential-tutorial-part-i-376c836e9ba7) by Andrey Panov.
 
