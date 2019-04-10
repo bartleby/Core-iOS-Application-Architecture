@@ -1,9 +1,9 @@
 //
 //  main.swift
-//  InstallVIPERTemplate
+//  Core-iOS-Application-Architecture
 //
-//  Created by Juanpe Catalán on 17/02/2017.
-//  Copyright © 2017 Juanpe Catalán. All rights reserved.
+//  Created by Alexey Artemev on 29/03/2019
+//  Copyright © 2019 iDevs. All rights reserved.
 //
 
 import Foundation
@@ -17,8 +17,8 @@ let homeDirectoryForCurrentUser = fileManager.homeDirectoryForCurrentUser.path
 let currentPath = fileManager.currentDirectoryPath
 let templatePath = "\(homeDirectoryForCurrentUser)/Library/Developer/Xcode/Templates/"
 
-let projectDir = "Project Templates/iOS/iDevs.io"
-let moduleDir = "File Templates/iDevs.io"
+let projectDir = "Project Templates/"
+let moduleDir = "File Templates/"
 
 let sourceProjectPath = "\(currentPath)/\(projectDir)"
 let sourceModulePath = "\(currentPath)/\(moduleDir)"
