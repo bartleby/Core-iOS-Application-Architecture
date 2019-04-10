@@ -15,8 +15,8 @@ protocol WeakBox: class {
 extension WeakBox {
     func weakBox<T>(_ configure: () -> T) -> T {
         let key = ObjectKey(T.self).key
-        if let object = self.weakBoxHolder[key]?.value {
-            return object as! T
+        if let object = self.weakBoxHolder[key]?.value as? T {
+            return object
         }
         let object = configure()
         weakBoxHolder[key] = WeakContainer(value: object as AnyObject)
