@@ -57,7 +57,6 @@
 							<string>Classes/Common/Protocols/Presentable.swift</string>
 							<string>Classes/Common/Router/Router.swift</string>
 							<string>Classes/Common/Router/RouterType.swift</string>
-							<string>Classes/Common/Misc/Result.swift</string>
 							<string>Classes/Common/View/ContainerView/ContainerView.swift</string>
 							<string>Classes/Common/View/ViewBuilder/ViewBuilder.swift</string>
 							<string>Classes/Constants/Constants.swift</string>
@@ -436,17 +435,6 @@
 				</array>
 				<key>Path</key>
 				<string>Classes/Common/Router/RouterType.swift</string>
-			</dict>
-			<key>Classes/Common/Misc/Result.swift</key>
-			<dict>
-				<key>Group</key>
-				<array>
-					<string>Classes</string>
-					<string>Common</string>
-					<string>Misc</string>
-				</array>
-				<key>Path</key>
-				<string>Classes/Common/Misc/Result.swift</string>
 			</dict>
 			<key>Classes/Common/View/ContainerView/ContainerView.swift</key>
 			<dict>
