@@ -136,7 +136,6 @@ For example, you plan a small project, then your choice is a project based on th
   - NSObject
 * Common
   - AppDelegateManager
-  - Misc
   - Coordinator
   - Module
   - ActionCloud
