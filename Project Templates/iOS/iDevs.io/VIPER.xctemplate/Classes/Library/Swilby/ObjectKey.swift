@@ -25,8 +25,8 @@ internal struct ObjectKey {
 
 // MARK: Hashable
 extension ObjectKey: Hashable {
-    var hashValue: Int {
-        return String(describing: objectType).hashValue ^ (name?.hashValue ?? 0)
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(String(describing: objectType).hashValue ^ (name?.hashValue ?? 0))
     }
 }
 

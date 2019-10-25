@@ -16,4 +16,8 @@ enum Constants {
     enum App {
         
     }
+    
+    enum Network {
+        
+    }
 }

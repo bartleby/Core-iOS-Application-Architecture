@@ -8,7 +8,9 @@
 
 import UIKit
 
-class BaseCoordinator: CoordinatorType, Presentable {
+class BaseCoordinator: CoordinatorType {
+    var dismiss: (() -> Void)?
+    
     let container: Container
     let router: RouterType
     

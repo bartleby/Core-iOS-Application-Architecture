@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol MainCoordinatorType: AlertCoordinable {
+protocol MainCoordinatorType: CoordinatorType {
 	
 }

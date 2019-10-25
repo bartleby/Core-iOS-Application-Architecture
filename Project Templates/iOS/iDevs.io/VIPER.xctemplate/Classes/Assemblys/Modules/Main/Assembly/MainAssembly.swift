@@ -8,8 +8,10 @@
 
 import UIKit
 
+typealias MainModule = Module<MainModuleInput, MainModuleOutput>
+
 class MainAssembly: Assembly {
-    func build() -> Module<MainModuleInput, MainModuleOutput> {
+    func build(coordinator: CoordinatorType) -> MainModule {
         
         // View
         let view = MainViewController.controllerFromStoryboard(.main)
@@ -17,8 +19,11 @@ class MainAssembly: Assembly {
         // Interactor
         let interactor = MainInteractor()
         
+        // Router
+        let router = MainRouter(coordinator: coordinator)
+        
         // Presenter
-        let presenter = MainPresenter(interactor: interactor)
+        let presenter = MainPresenter(interactor: interactor, router: router)
         
         // Dependency Setup
         presenter.view = view

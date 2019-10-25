@@ -9,5 +9,10 @@
 import Foundation
 
 class MainInteractor: MainInteractorInput {
-	
+
+}
+
+// MARK: - Private
+extension MainInteractor {
+
 }

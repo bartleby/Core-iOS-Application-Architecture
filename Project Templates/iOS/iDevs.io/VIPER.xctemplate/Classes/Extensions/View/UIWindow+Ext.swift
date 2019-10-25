@@ -8,15 +8,15 @@
 
 import UIKit
 
-public extension UIWindow {
-    public func visibleViewController() -> UIViewController? {
+extension UIWindow {
+    func visibleViewController() -> UIViewController? {
         if let rootViewController: UIViewController  = self.rootViewController {
             return UIWindow.getVisibleViewControllerFrom(rootViewController)
         }
         return nil
     }
     
-    public class func getVisibleViewControllerFrom(_ vc: UIViewController) -> UIViewController {
+    class func getVisibleViewControllerFrom(_ vc: UIViewController) -> UIViewController {
         if let navigationController = vc as? UINavigationController {
             return UIWindow.getVisibleViewControllerFrom(navigationController.visibleViewController!)
             

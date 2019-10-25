@@ -11,7 +11,7 @@ import Foundation
 // MARK: - FileManager extension
 
 /// This extension adds some useful functions to FileManager.
-public extension FileManager {
+extension FileManager {
     // MARK: - Variables
     
     /// Path type enum.
@@ -20,7 +20,7 @@ public extension FileManager {
     /// - library: Library path.
     /// - documents: Documents path.
     /// - cache: Cache path.
-    public enum PathType: Equatable {
+    enum PathType: Equatable {
         case mainBundle
         case library
         case documents
@@ -28,7 +28,7 @@ public extension FileManager {
         case applicationSupport
         case source(String)
         
-        static public func ==(lhs: PathType, rhs: PathType) -> Bool {
+        static func ==(lhs: PathType, rhs: PathType) -> Bool {
             switch (lhs, rhs) {
             case let (.source(a),   .source(b)):
                 return a == b
@@ -48,7 +48,7 @@ public extension FileManager {
         }
     }
     
-    public enum FileManagerError: Error {
+    enum FileManagerError: Error {
         case pathNotExist
         case pathNotAllowed
     }
@@ -59,7 +59,7 @@ public extension FileManager {
     ///
     /// - Parameter path: Path type.
     /// - Returns: Returns the path type String.
-    public func pathFor(_ path: PathType) -> String? {
+    func pathFor(_ path: PathType) -> String? {
         var pathString: String?
         
         switch path {
@@ -88,7 +88,7 @@ public extension FileManager {
     ///   - path: File path.
     ///   - content: Content to be saved.
     /// - Throws: write(toFile:, atomically:, encoding:) errors.
-    public func save(file: String, in path: PathType, content: String) throws {
+    func save(file: String, in path: PathType, content: String) throws {
         guard let path = FileManager.default.pathFor(path) else {
             return
         }
@@ -102,7 +102,7 @@ public extension FileManager {
     ///   - path: File path.
     /// - Returns: Returns the content of the file a String.
     /// - Throws: Throws String(contentsOfFile:, encoding:) errors.
-    public func read(file: String, from path: PathType) throws -> String? {
+    func read(file: String, from path: PathType) throws -> String? {
         guard let path = FileManager.default.pathFor(path) else {
             return nil
         }
@@ -158,7 +158,7 @@ public extension FileManager {
     ///
     /// - Parameter file: Filename
     /// - Returns: Returns the path as a String.
-    public func mainBundlePath(file: String = "") -> String? {
+    func mainBundlePath(file: String = "") -> String? {
         return Bundle.main.path(forResource: (file as NSString).deletingPathExtension, ofType: (file as NSString).pathExtension)
     }
     
@@ -166,7 +166,7 @@ public extension FileManager {
     ///
     /// - Parameter file: Filename
     /// - Returns: Returns the path as a String.
-    public func documentsPath(file: String = "") -> String? {
+    func documentsPath(file: String = "") -> String? {
         guard let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
             return nil
         }
@@ -177,7 +177,7 @@ public extension FileManager {
     ///
     /// - Parameter file: Filename
     /// - Returns: Returns the path as a String.
-    public func libraryPath(file: String = "") -> String? {
+    func libraryPath(file: String = "") -> String? {
         guard let libraryURL = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).first else {
             return nil
         }
@@ -188,7 +188,7 @@ public extension FileManager {
     ///
     /// - Parameter file: Filename
     /// - Returns: Returns the path as a String.
-    public func cachePath(file: String = "") -> String? {
+    func cachePath(file: String = "") -> String? {
         guard let cacheURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else {
             return nil
         }
@@ -199,7 +199,7 @@ public extension FileManager {
     ///
     /// - Parameter file: Filename
     /// - Returns: Returns the path as a String.
-    public func applicationSupportPath(file: String = "") -> String? {
+    func applicationSupportPath(file: String = "") -> String? {
         guard let applicationSupportURL = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first else {
             return nil
         }
@@ -213,7 +213,7 @@ public extension FileManager {
     ///   - path: Path of the file.
     /// - Returns: Returns the file size.
     /// - Throws: Throws FileManager.default.attributesOfItem(atPath: ) errors.
-    public func size(file: String, from path: PathType) throws -> Float? {
+    func size(file: String, from path: PathType) throws -> Float? {
         if !file.isEmpty {
             guard let path = FileManager.default.pathFor(path) else {
                 return nil
@@ -238,7 +238,7 @@ public extension FileManager {
     /// - Returns: Returns true if the operation was successful, otherwise false.
     /// - Throws: Throws FileManager.default.removeItem(atPath: ) errors.
     
-    public func delete(file: String, from path: PathType) throws {
+    func delete(file: String, from path: PathType) throws {
         if !file.isEmpty {
             guard let path = FileManager.default.pathFor(path) else {
                 throw FileManagerError.pathNotExist
@@ -260,7 +260,7 @@ public extension FileManager {
     ///   - destination:  Destination path of the file.
     /// - Returns: Returns true if the operation was successful, otherwise false.
     /// - Throws: Throws FileManager.default.moveItem(atPath:, toPath:) and BFKitError errors.
-    public func move(file: String, from origin: PathType, to destination: PathType) throws {
+    func move(file: String, from origin: PathType, to destination: PathType) throws {
         let paths = try check(file: file, origin: origin, destination: destination)
         
         if paths.fileExist {
@@ -276,7 +276,7 @@ public extension FileManager {
     ///   - destination: Destination path
     /// - Returns: Returns true if the operation was successful, otherwise false.
     /// - Throws: Throws FileManager.default.copyItem(atPath:, toPath:) and BFKitError errors.
-    public func copy(file: String, from origin: PathType, to destination: PathType) throws {
+    func copy(file: String, from origin: PathType, to destination: PathType) throws {
         let paths = try check(file: file, origin: origin, destination: destination)
         
         if paths.fileExist {
@@ -317,7 +317,7 @@ public extension FileManager {
     ///   - newName: New filename.
     /// - Returns: Returns true if the operation was successful, otherwise false.
     /// - Throws: Throws FileManager.default.copyItem(atPath:, toPath:), FileManager.default.removeItem(atPath:, toPath:) and BFKitError errors.
-    public func rename(file: String, in origin: PathType, to newName: String) throws {
+    func rename(file: String, in origin: PathType, to newName: String) throws {
         guard let originPath = FileManager.default.pathFor(origin) else {
             throw FileManagerError.pathNotExist
         }
@@ -340,7 +340,7 @@ public extension FileManager {
     /// - Returns: Returns true if the operation was successful, otherwise false.
     /// - Throws: Throws BFKitError errors.
     @discardableResult
-    public func setSettings(filename: String, object: Any, forKey objKey: String) -> Bool {
+    func setSettings(filename: String, object: Any, forKey objKey: String) -> Bool {
         guard var path = FileManager.default.pathFor(.applicationSupport) else {
             return false
         }
@@ -364,7 +364,7 @@ public extension FileManager {
     ///   - filename: Settings filename. "-Settings" will be automatically added.
     ///   - forKey: Object key.
     /// - Returns: Returns the object for the given key.
-    public func getSettings(filename: String, forKey: String) -> Any? {
+    func getSettings(filename: String, forKey: String) -> Any? {
         guard var path = FileManager.default.pathFor(.applicationSupport) else {
             return nil
         }

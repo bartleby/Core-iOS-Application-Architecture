@@ -34,6 +34,7 @@
 							<string>Classes/Assemblys/Modules/Main/Contracts/MainContracts.swift</string>
 							<string>Classes/Assemblys/Modules/Main/View/MainViewController.swift</string>
 							<string>Classes/Assemblys/Modules/Main/Storyboards/Main.storyboard</string>
+							<string>Classes/Assemblys/Modules/Main/Router/MainRouter.swift</string>
 							<string>Classes/Assemblys/Coordinators/AppCoordinator/AppCoordinator.swift</string>
 							<string>Classes/Assemblys/Coordinators/AppCoordinator/AppCoordinatorAssembly.swift</string>
 							<string>Classes/Assemblys/Coordinators/AppCoordinator/AppCoordinatorType.swift</string>
@@ -49,18 +50,19 @@
 							<string>Classes/AppDelegate/AppDelegate.swift</string>
 							<string>Classes/AppDelegate/Services/ApplicationService.swift</string>
 							<string>Classes/Common/Module/Module.swift</string>
-							<string>Classes/Common/ActionCloud/ActionCloud.swift</string>
 							<string>Classes/Common/AppDelegateManager/AppDelegateManager.swift</string>
 							<string>Classes/Common/Coordinator/LaunchInstructor.swift</string>
 							<string>Classes/Common/Coordinator/BaseCoordinator.swift</string>
 							<string>Classes/Common/Coordinator/CoordinatorType.swift</string>
 							<string>Classes/Common/DeepLink/DeepLinkOption.swift</string>
-							<string>Classes/Common/Protocols/AlertCoordinable.swift</string>
+							<string>Classes/Common/Protocols/AlertRoutable.swift</string>
 							<string>Classes/Common/Protocols/Presentable.swift</string>
 							<string>Classes/Common/Router/Router.swift</string>
 							<string>Classes/Common/Router/RouterType.swift</string>
+							<string>Classes/Common/Router/BaseModuleRouter.swift</string>
 							<string>Classes/Common/View/ContainerView/ContainerView.swift</string>
 							<string>Classes/Common/View/ViewBuilder/ViewBuilder.swift</string>
+							<string>Classes/Common/Presenter/BasePresenter.swift</string>
 							<string>Classes/Constants/Constants.swift</string>
 							<string>Classes/Extensions/Codable/Codable+Ext.swift</string>
 							<string>Classes/Extensions/Collection/Array+Ext.swift</string>
@@ -92,6 +94,14 @@
 							<string>Classes/Utils/Tweaks/DeviceTweak.swift</string>
 							<string>Classes/Utils/Tweaks/ThreadTweak.swift</string>
 							<string>Classes/Utils/Tweaks/UtilsTweak.swift</string>
+
+							<string>Classes/Network/ServerApi.swift</string>
+							<string>Classes/Network/Response/ExempleResponse.swift</string>
+							<string>Classes/Network/Request/NetRequests.swift</string>
+
+							<string>Classes/Themes/Theme.swift</string>
+
+
 							<string>../Podfile</string>
 						</array>
 					</dict>
@@ -177,6 +187,19 @@
 				</array>
 				<key>Path</key>
 				<string>Classes/Assemblys/Modules/Main/Storyboards/Main.storyboard</string>
+			</dict>
+			<key>Classes/Assemblys/Modules/Main/Router/MainRouter.swift</key>
+			<dict>
+				<key>Group</key>
+				<array>
+					<string>Classes</string>
+					<string>Assemblys</string>
+					<string>Modules</string>
+					<string>Main</string>
+					<string>Router</string>
+				</array>
+				<key>Path</key>
+				<string>Classes/Assemblys/Modules/Main/Router/MainRouter.swift</string>
 			</dict>
 			<key>Classes/Assemblys/Coordinators/AppCoordinator/AppCoordinator.swift</key>
 			<dict>
@@ -354,17 +377,7 @@
 				<key>Path</key>
 				<string>Classes/Common/Module/Module.swift</string>
 			</dict>
-			<key>Classes/Common/ActionCloud/ActionCloud.swift</key>
-			<dict>
-				<key>Group</key>
-				<array>
-					<string>Classes</string>
-					<string>Common</string>
-					<string>ActionCloud</string>
-				</array>
-				<key>Path</key>
-				<string>Classes/Common/ActionCloud/ActionCloud.swift</string>
-			</dict>
+
 			<key>Classes/Common/AppDelegateManager/AppDelegateManager.swift</key>
 			<dict>
 				<key>Group</key>
@@ -420,7 +433,7 @@
 				<key>Path</key>
 				<string>Classes/Common/DeepLink/DeepLinkOption.swift</string>
 			</dict>
-			<key>Classes/Common/Protocols/AlertCoordinable.swift</key>
+			<key>Classes/Common/Protocols/AlertRoutable.swift</key>
 			<dict>
 				<key>Group</key>
 				<array>
@@ -429,7 +442,7 @@
 					<string>Protocols</string>
 				</array>
 				<key>Path</key>
-				<string>Classes/Common/Protocols/AlertCoordinable.swift</string>
+				<string>Classes/Common/Protocols/AlertRoutable.swift</string>
 			</dict>
 			<key>Classes/Common/Protocols/Presentable.swift</key>
 			<dict>
@@ -464,6 +477,17 @@
 				<key>Path</key>
 				<string>Classes/Common/Router/RouterType.swift</string>
 			</dict>
+			<key>Classes/Common/Router/BaseModuleRouter.swift</key>
+			<dict>
+				<key>Group</key>
+				<array>
+					<string>Classes</string>
+					<string>Common</string>
+					<string>Router</string>
+				</array>
+				<key>Path</key>
+				<string>Classes/Common/Router/BaseModuleRouter.swift</string>
+			</dict>
 			<key>Classes/Common/View/ContainerView/ContainerView.swift</key>
 			<dict>
 				<key>Group</key>
@@ -487,6 +511,17 @@
 				</array>
 				<key>Path</key>
 				<string>Classes/Common/View/ViewBuilder/ViewBuilder.swift</string>
+			</dict>
+			<key>Classes/Common/Presenter/BasePresenter.swift</key>
+			<dict>
+				<key>Group</key>
+				<array>
+					<string>Classes</string>
+					<string>Common</string>
+					<string>Presenter</string>
+				</array>
+				<key>Path</key>
+				<string>Classes/Common/Presenter/BasePresenter.swift</string>
 			</dict>
 			<key>Classes/Constants/Constants.swift</key>
 			<dict>
@@ -827,6 +862,50 @@
 				</array>
 				<key>Path</key>
 				<string>Classes/Utils/Tweaks/UtilsTweak.swift</string>
+			</dict>
+			<key>Classes/Network/ServerApi.swift</key>
+			<dict>
+				<key>Group</key>
+				<array>
+					<string>Classes</string>
+					<string>Network</string>
+				</array>
+				<key>Path</key>
+				<string>Classes/Network/ServerApi.swift</string>
+			</dict>
+
+			<key>Classes/Network/Response/ExempleResponse.swift</key>
+			<dict>
+				<key>Group</key>
+				<array>
+					<string>Classes</string>
+					<string>Network</string>
+					<string>Response</string>
+				</array>
+				<key>Path</key>
+				<string>Classes/Network/Response/ExempleResponse.swift</string>
+			</dict>
+
+			<key>Classes/Network/Request/NetRequests.swift</key>
+			<dict>
+				<key>Group</key>
+				<array>
+					<string>Classes</string>
+					<string>Network</string>
+					<string>Request</string>
+				</array>
+				<key>Path</key>
+				<string>Classes/Network/Request/NetRequests.swift</string>
+			</dict>
+			<key>Classes/Themes/Theme.swift</key>
+			<dict>
+				<key>Group</key>
+				<array>
+					<string>Classes</string>
+					<string>Themes</string>
+				</array>
+				<key>Path</key>
+				<string>Classes/Themes/Theme.swift</string>
 			</dict>
 			<key>../Podfile</key>
 			<dict>

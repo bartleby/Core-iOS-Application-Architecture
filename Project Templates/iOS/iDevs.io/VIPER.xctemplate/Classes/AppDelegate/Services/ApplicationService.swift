@@ -31,6 +31,7 @@ class ApplicationService: NSObject, AppDelegateService {
         appConfig.registerDefaults()
         
         // Setup window
+        window = UIWindow()
         window?.rootViewController = appCoordinator.toPresent()
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
@@ -39,6 +40,8 @@ class ApplicationService: NSObject, AppDelegateService {
         let notification = launchOptions?[.remoteNotification] as? [String: AnyObject]
         let deepLink = DeepLinkOption.build(with: notification)
         appCoordinator.start(with: deepLink)
+        
+        //printAllAvailableFonts()
         
         return true
     }

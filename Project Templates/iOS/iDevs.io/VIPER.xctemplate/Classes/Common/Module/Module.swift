@@ -1,12 +1,16 @@
 //
-//  Module.swift
-//  HHGGHH
+//  ___FILENAME___
+//  ___PROJECTNAME___
 //
-//  Created by bart on 17/02/2019.
-//  Copyright © 2019 idevs. All rights reserved.
+//  Created by ___FULLUSERNAME___ on ___DATE___
+//  ___COPYRIGHT___
 //
 
 import UIKit
+
+protocol ModuleOutput {
+    
+}
 
 struct Module<Input, Output>: Presentable {
     var view: UIViewController

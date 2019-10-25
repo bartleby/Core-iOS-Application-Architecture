@@ -51,7 +51,6 @@ func randomString(_ length: Int) -> String {
 }
 
 public func printAllAvailableFonts() {
-    
     let fontFamilyNames = UIFont.familyNames
     
     for familyName in fontFamilyNames {

@@ -17,6 +17,18 @@ class MainViewController: UIViewController, MainViewInput {
     }
 }
 
+// MARK: - Configure
+extension MainViewController {
+    
+}
+
+// MARK: View Input
+extension MainViewController {
+    func set(title: String) {
+        self.title = title
+    }
+}
+
 // MARK: Button Action
 extension MainViewController {
     

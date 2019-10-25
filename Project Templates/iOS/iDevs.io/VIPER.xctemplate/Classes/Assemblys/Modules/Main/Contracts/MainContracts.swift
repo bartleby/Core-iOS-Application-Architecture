@@ -14,13 +14,13 @@ protocol MainModuleInput {
 }
 
 // Module Output
-protocol MainModuleOutput {
+protocol MainModuleOutput: ModuleOutput {
     
 }
 
 // View Input
 protocol MainViewInput: AnyObject {
-    
+    func set(title: String)
 }
 
 // View Output
@@ -30,6 +30,10 @@ protocol MainViewOutput: AnyObject {
 
 // Interactor
 protocol MainInteractorInput {
-    
+
 }
 
+// Router
+protocol MainRouterProtocol: AlertRoutable {
+
+}

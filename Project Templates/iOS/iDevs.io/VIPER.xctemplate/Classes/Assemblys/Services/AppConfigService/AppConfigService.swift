@@ -1,9 +1,9 @@
 //
 //  AppConfigService.swift
-//  Exemple
+//  InstaViewer
 //
-//  Created by bart on 17/02/2019
-//  Copyright © 2019 idevs. All rights reserved.
+//  Created by Bart on 18.10.2019
+//  Copyright © 2019 iDevs.io. All rights reserved.
 //
 
 import Foundation

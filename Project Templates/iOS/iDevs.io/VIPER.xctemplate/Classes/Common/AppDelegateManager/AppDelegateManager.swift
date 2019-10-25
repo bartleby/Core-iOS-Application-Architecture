@@ -1,9 +1,9 @@
 //
-//  PlugableAppDelegate.swift
-//  Exemple
+//  AppDelegateManager.swift
+//  InstaViewer
 //
-//  Created by bart on 17/02/2019
-//  Copyright © 2019 idevs. All rights reserved.
+//  Created by Bart on 18.10.2019
+//  Copyright © 2019 iDevs.io. All rights reserved.
 //
 
 import UIKit
@@ -92,14 +92,14 @@ extension AppDelegateManager {
         }
     }
     
-    @available(iOS 2.0, *)
+    @available(iOS, introduced: 2.0, deprecated: 13.0)
     open func application(_ application: UIApplication, willChangeStatusBarOrientation newStatusBarOrientation: UIInterfaceOrientation, duration: TimeInterval) {
         for service in _services {
             service.application?(application, willChangeStatusBarOrientation: newStatusBarOrientation, duration: duration)
         }
     }
     
-    @available(iOS 2.0, *)
+    @available(iOS, introduced: 2.0, deprecated: 13.0)
     open func application(_ application: UIApplication, didChangeStatusBarOrientation oldStatusBarOrientation: UIInterfaceOrientation) {
         for service in _services {
             service.application?(application, didChangeStatusBarOrientation: oldStatusBarOrientation)

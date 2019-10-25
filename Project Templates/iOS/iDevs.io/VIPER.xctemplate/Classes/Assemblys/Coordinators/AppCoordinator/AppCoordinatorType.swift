@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol AppCoordinatorType: CoordinatorType, Presentable {
+protocol AppCoordinatorType: CoordinatorType {
 	
 }

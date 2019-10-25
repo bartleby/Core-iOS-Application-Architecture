@@ -8,14 +8,7 @@
 
 import Foundation
 
-class MainPresenter: MainModuleOutput {
-        
-    fileprivate let interactor: MainInteractorInput
-    
-    init(interactor: MainInteractorInput) {
-        self.interactor = interactor
-    }
-    
+class MainPresenter: BasePresenter<MainInteractorInput, MainRouterProtocol>, MainModuleOutput {
     // MARK: - Weak properties
     weak var view: MainViewInput?
 }
@@ -30,10 +23,9 @@ extension MainPresenter: MainModuleInput {
     
 }
 
-
 // MARK: View Output
 extension MainPresenter: MainViewOutput {
     func viewDidLoad() {
-        
+        view?.set(title: "Main")
     }
 }

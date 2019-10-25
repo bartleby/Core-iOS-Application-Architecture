@@ -10,7 +10,7 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: AppDelegateManager {
-    var window: UIWindow? = UIWindow()
+    var window: UIWindow?
     
     lazy var container: DependencyContainer = {
         let factory = AssemblyFactory()

@@ -9,9 +9,10 @@
 import UIKit
 
 class MainCoordinator: BaseCoordinator, MainCoordinatorType {
+    
     override func start() {
-        let mainModule = container.resolve(MainAssembly.self).build()
-        router.setRootModule(mainModule)
+        let module = container.resolve(MainAssembly.self).build(coordinator: self)
+        router.setRootModule(module)
     }
     
     override func toPresent() -> UIViewController {
