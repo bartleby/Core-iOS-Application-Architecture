@@ -33,6 +33,6 @@ protocol ___VARIABLE_moduleName___InteractorInput {
 }
 
 // Router
-protocol ___VARIABLE_moduleName___RouterProtocol: AlertRoutable, HUDRoutable {
+protocol ___VARIABLE_moduleName___RouterProtocol: AlertRoutable {
     
 }
