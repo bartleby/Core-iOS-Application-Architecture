@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ___VARIABLE_moduleName___ViewController: UITableViewController, ___VARIABLE_moduleName___ViewInput {
+class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIABLE_moduleName___ViewInput {
     var output: ___VARIABLE_moduleName___ViewOutput!
     
     override func viewDidLoad() {
