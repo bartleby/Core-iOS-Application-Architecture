@@ -8,6 +8,6 @@
 
 import Foundation
 
-class ___FILEBASENAME___: ___VARIABLE_moduleName___InteractorInput {
-	
+class ___VARIABLE_moduleName___Router: BaseModuleRouter, ___VARIABLE_moduleName___RouterProtocol {
+    
 }

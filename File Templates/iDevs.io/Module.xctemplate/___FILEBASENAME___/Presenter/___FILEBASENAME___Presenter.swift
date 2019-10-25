@@ -8,12 +8,7 @@
 
 import Foundation
 
-class ___FILEBASENAME___: ___VARIABLE_moduleName___ModuleOutput {
-    fileprivate let interactor: ___VARIABLE_moduleName___InteractorInput
-    
-    init(interactor: ___VARIABLE_moduleName___InteractorInput) {
-        self.interactor = interactor
-    }
+class ___VARIABLE_moduleName___Presenter: BasePresenter<___VARIABLE_moduleName___InteractorInput, ___VARIABLE_moduleName___RouterProtocol>, ___VARIABLE_moduleName___ModuleOutput {
     
     // MARK: - Weak properties
     weak var view: ___VARIABLE_moduleName___ViewInput?
@@ -32,6 +27,6 @@ extension ___VARIABLE_moduleName___Presenter: ___VARIABLE_moduleName___ModuleInp
 // MARK: View Output
 extension ___VARIABLE_moduleName___Presenter: ___VARIABLE_moduleName___ViewOutput {
     func viewDidLoad() {
-        
+        view?.set(title: "___VARIABLE_moduleName___")
     }
 }

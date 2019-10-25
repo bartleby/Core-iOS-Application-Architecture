@@ -5,11 +5,11 @@
 	<key>Kind</key>
 	<string>Xcode.IDEFoundation.TextSubstitutionFileTemplateKind</string>
 	<key>Description</key>
-	<string>Module VIPER</string>
+	<string>Module</string>
 	<key>SortOrder</key>
 	<string>1</string>
 	<key>DefaultCompletionName</key>
-	<string>Module VIPER</string>
+	<string>Module</string>
 	<key>Platforms</key>
 	<array>
 		<string>com.apple.platform.iphoneos</string>

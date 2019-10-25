@@ -8,12 +8,24 @@
 
 import UIKit
 
-class ___FILEBASENAME___: UIViewController, ___VARIABLE_moduleName___ViewInput {
+class ___VARIABLE_moduleName___ViewController: UITableViewController, ___VARIABLE_moduleName___ViewInput {
     var output: ___VARIABLE_moduleName___ViewOutput!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewDidLoad()
+    }
+}
+
+// MARK: - Configure
+extension ___VARIABLE_moduleName___ViewController {
+    
+}
+
+// MARK: View Input
+extension ___VARIABLE_moduleName___ViewController {
+    func set(title: String) {
+        self.title = title
     }
 }
 
