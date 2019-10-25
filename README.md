@@ -2,6 +2,8 @@
 
 ## Overview
 
+MVP and MVC modules template has been deprecated!
+
 Core iOS Application Architecture - The development paradigm of clean, testable code and modular iOS applications.
 
 This repository contains Xcode templates for quickly creating a project, modules, services and coordinator.
