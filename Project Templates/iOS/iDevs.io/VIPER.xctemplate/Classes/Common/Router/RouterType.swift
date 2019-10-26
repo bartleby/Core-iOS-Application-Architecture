@@ -13,7 +13,8 @@ protocol RouterType: Presentable {
     var rootViewController: UIViewController? { get }
     
     func present(_ module: Presentable)
-    func present(_ module: Presentable, animated: Bool)
+    func present(_ module: Presentable, style: UIModalPresentationStyle)
+    func present(_ module: Presentable, animated: Bool, style: UIModalPresentationStyle)
     
     func push(_ module: Presentable)
     func push(_ module: Presentable, hideBottomBar: Bool)
