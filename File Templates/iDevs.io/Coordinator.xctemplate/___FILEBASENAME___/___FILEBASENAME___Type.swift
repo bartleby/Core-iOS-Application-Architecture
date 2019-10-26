@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol ___FILEBASENAME___: CoordinatorType, Presentable {
+protocol ___FILEBASENAME___: CoordinatorType {
 	
 }
