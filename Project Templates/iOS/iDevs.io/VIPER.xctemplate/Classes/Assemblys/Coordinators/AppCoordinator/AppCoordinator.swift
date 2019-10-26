@@ -33,11 +33,11 @@ class AppCoordinator: BaseCoordinator, AppCoordinatorType {
 // MARK: Main Flow
 extension AppCoordinator {
     func startMainFlow() {
-        let mainCoordinator = container.resolve(MainCoordinatorAssembly.self).build(router: router)
-        addChild(mainCoordinator)
-        mainCoordinator.start()
+        let coordinator = container.resolve(MainCoordinatorAssembly.self).build(router: router)
+        addChild(coordinator)
+        coordinator.start()
         
-        self.router.setRootModule(mainCoordinator)
+        self.router.setRootModule(coordinator)
     }
 }
 
