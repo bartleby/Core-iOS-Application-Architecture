@@ -9,7 +9,7 @@
 import UIKit
 
 class BaseCoordinator: CoordinatorType {
-    var dismiss: (() -> Void)?
+    var completion: (() -> Void)?
     
     let container: Container
     let router: RouterType
