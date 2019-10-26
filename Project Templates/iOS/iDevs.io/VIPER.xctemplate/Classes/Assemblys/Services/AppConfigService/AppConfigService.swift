@@ -15,13 +15,13 @@ class AppConfigService: AppConfigServiceType {
 }
 
 extension AppConfigService {
-    func obtainConfig<T>(for key: ConfigKey) -> T {
+    func obtain<T>(for key: ConfigKey) -> T {
         guard let value = userDefaults.object(forKey: key.value) else { fatalError("Config key not found") }
         guard let result = value as? T else { fatalError("Expecting another type") }
         return result
     }
     
-    func setConfig<T>(value: T, for key: ConfigKey) {
+    func set<T>(value: T, for key: ConfigKey) {
         userDefaults.set(value, forKey: key.value)
         userDefaults.synchronize()
     }

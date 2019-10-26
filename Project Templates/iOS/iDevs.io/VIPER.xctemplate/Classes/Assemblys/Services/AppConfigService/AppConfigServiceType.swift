@@ -23,8 +23,8 @@ enum ConfigKey: String {
 }
 
 protocol AppConfigServiceType {
-    func obtainConfig<T>(for key: ConfigKey) -> T
-    func setConfig<T>(value: T, for key: ConfigKey)
+    func obtain<T>(for key: ConfigKey) -> T
+    func set<T>(value: T, for key: ConfigKey)
     
     func registerDefaults()
 }
