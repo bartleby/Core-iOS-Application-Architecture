@@ -30,7 +30,7 @@ final class Router: NSObject, RouterType {
     }
     
     func present(_ module: Presentable)  {
-        present(module, style: .automatic)
+        present(module, style: .overFullScreen)
     }
     
     func present(_ module: Presentable, style: UIModalPresentationStyle) {
