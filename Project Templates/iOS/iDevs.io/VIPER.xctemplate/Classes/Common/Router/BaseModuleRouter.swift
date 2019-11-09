@@ -9,12 +9,12 @@
 import UIKit
 
 protocol BaseModuleRoutable {
-    var coordinator: CoordinatorType {set get}
+    var coordinator: CoordinatorType! {set get}
     var container: Container {set get}
 }
 
 class BaseModuleRouter: BaseModuleRoutable {
-    var coordinator: CoordinatorType
+    weak var coordinator: CoordinatorType!
     var container: Container
     
     init(coordinator: CoordinatorType) {
