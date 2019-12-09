@@ -26,29 +26,27 @@ let sourceModulePath = "\(currentPath)/\(moduleDir)"
 let projectTemplatePath = "\(templatePath)/\(projectDir)"
 let moduleTemplatePath = "\(templatePath)/\(moduleDir)"
 
-func moveTemplate(fromPath: String, toPath: String){
-    let toURL = URL(fileURLWithPath:toPath)
-
-    do {
-        if !fileManager.fileExists(atPath: toPath){
-            try fileManager.copyItem(atPath: fromPath, toPath: toPath)
-            printInConsole("Template installed succesfully.")
-
-        } else {
-            try _ = fileManager.removeItem(at: toURL)
-            try _ = fileManager.copyItem(atPath: fromPath, toPath: toPath)
-            printInConsole("Template already exists. So has been replaced succesfully.")
-        }
-    }
-    catch let error as NSError {
-        printInConsole("Ooops! Something went wrong: \(error.localizedFailureReason!)")
-    }
+func makeDir(path: String) {
+    try? fileManager.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
 }
 
-printInConsole("Install Project templates...")
-moveTemplate(fromPath: sourceProjectPath, toPath: projectTemplatePath)
+func moveTemplate(fromPath: String, toPath: String) throws {
+    let toURL = URL(fileURLWithPath:toPath)
+    try _ = fileManager.removeItem(at: toURL)
+    try _ = fileManager.copyItem(atPath: fromPath, toPath: toPath)
+}
 
-printInConsole("Install Module templates...")
-moveTemplate(fromPath: sourceModulePath, toPath: moduleTemplatePath)
 
-printInConsole("All templates have been successfully installed.")
+do {
+    printInConsole("Install Project templates at \(projectTemplatePath)")
+    makeDir(path: projectTemplatePath)
+    try moveTemplate(fromPath: sourceProjectPath, toPath: projectTemplatePath)
+
+    printInConsole("Install Module templates at \(moduleTemplatePath)")
+    makeDir(path: moduleTemplatePath)
+    try moveTemplate(fromPath: sourceModulePath, toPath: moduleTemplatePath)
+    
+    printInConsole("All templates have been successfully installed.")
+} catch let error as NSError {
+    printInConsole("Could not install the templates. Reason: \(error.localizedFailureReason ?? "")")
+}
